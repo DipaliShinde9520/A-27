@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature_converter</title>
+</head>
+
+<body>
+
+  <script>
+    // Function to convert Celsius to Fahrenheit
+    function celsiusToFahrenheit(celsius) {
+      return (celsius * 9 / 5) + 32;
+    }
+
+    // Function to convert Fahrenheit to Celsius
+    function fahrenheitToCelsius(fahrenheit) {
+      return (fahrenheit - 32) * 5 / 9;
+    }
+
+    let temp = parseFloat(prompt("Enter the temperature:"));
+    let unit = prompt("Enter 'C' to convert from Celsius to Fahrenheit or 'F' to convert from Fahrenheit to Celsius:").toUpperCase();
+
+    if (unit === 'C') {
+      let result = celsiusToFahrenheit(temp).toFixed(1);
+      alert(temp + "°C is " + result + "°F");
+    } else if (unit === 'F') {
+      let result = fahrenheitToCelsius(temp).toFixed(1);
+      alert(temp + "°F is " + result + "°C");
+    } else {
+      alert("Invalid input. Please enter 'C' or 'F'.");
+    }
+</script>
+
+</body>
+</html>
